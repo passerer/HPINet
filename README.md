@@ -13,5 +13,5 @@ Other versions of the packages may also work, but they are not tested.
 
 #### Test Datasets
 
-- Download the five test datasets (Set5, Set14, B100, Urban100, Manga109) from [Google Drive]((https://drive.google.com/drive/folders/1B3DJGQKB6eNdwuQIhdskA64qUuVKLZ9u))
+- Download the five test datasets (Set5, Set14, B100, Urban100, Manga109) from [Google Drive((https://drive.google.com/drive/folders/1B3DJGQKB6eNdwuQIhdskA64qUuVKLZ9u))
 - Put them in `benchmarks/` directory, or customize the path in the code
