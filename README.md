@@ -1,5 +1,5 @@
 ## From Coarse to Fine: Hierarchical Pixel Integration for Lightweight Image Super-Resolution
-![psnr_comparison.png](psnr_comparison.png)
+![PSNR comparison between our HPINet and other SOTA SR models.](psnr_comparison.png)
 ___
 Tis is the testing code of HPINet based on PyTorch.
 
