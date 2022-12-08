@@ -1,17 +1,21 @@
+<div align="center">
+  <img src="./img/HPINet_Performance.png"/>
 </div>
 
-
+</div>
 <div align="center">
 
-# From Coarse to Fine: Hierarchical Pixel Integration for Lightweight Image Super-Resolution
-
+## From Coarse to Fine: Hierarchical Pixel Integration for Lightweight Image Super-Resolution
 </div>
 
 
 This is the Pytorch implementation of HPINet (AAAI2023 Acceptance).
 
-***Code** and **checkpoints** will be released.We provide [visual results](https://pan.baidu.com/s/1qE69aeILOvG_6pq6h5Qndg 
-) of HPINet-M (code:z86e)*
+ [[arXiv paper](https://arxiv.org/abs/2211.16776)] [[pretrained models](https://github.com/passerer/HPINet/tree/cc/checkpoints)] [[visual results](https://pan.baidu.com/s/1qE69aeILOvG_6pq6h5Qndg 
+) (code:z86e)]
+ 
+> **Note**
+> *Training code* will be released.
 
 ### Dependencies
 
