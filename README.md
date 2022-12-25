@@ -5,7 +5,7 @@
 </div>
 <div align="center">
 
-## From Coarse to Fine: Hierarchical Pixel Integration for Lightweight Image Super-Resolution
+# From Coarse to Fine: Hierarchical Pixel Integration for Lightweight Image Super-Resolution
 </div>
 
 

@@ -48,13 +48,13 @@ def tensor2np(tensor, out_type=np.uint8, min_max=(0, 1)):
     return img_np.astype(out_type)
 
 def load_state_dict(path):
-    print('loading:',path)
+    print('loading:', path)
     state_dict = torch.load(path)
-    new_state_dcit = OrderedDict()
+    new_state_dict = OrderedDict()
     for k, v in state_dict.items():
         if 'module' in k:
             name = k[7:]
         else:
             name = k
-        new_state_dcit[name] = v
-    return new_state_dcit
+        new_state_dict[name] = v
+    return new_state_dict

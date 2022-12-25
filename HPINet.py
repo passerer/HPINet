@@ -134,7 +134,7 @@ class HPINet(nn.Module):
             target (Tensor): GT image.
         """
         b, _, h, w = x.size()
-        base = torch.nn.functional.interpolate(x, scale_factor=self.upscale, mode='bilinear', align_corners=False)
+        base = F.interpolate(x, scale_factor=self.upscale, mode='bilinear', align_corners=False)
         x = self.first_conv(x)
         for i in range(self.block_num):
             ps = self.patch_size[i]
