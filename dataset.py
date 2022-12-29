@@ -121,7 +121,7 @@ class DIV2KTrainDataset(Dataset):
             lr (ndarray): input image.
             hr (Tensor): high resolution counterpart of input.
             hflip (bool): Whether to flip horizontally.
-            vflipt (bool): Whether to flip vertically.
+            vflip (bool): Whether to flip vertically.
             rgb_permute (bool): Whether to permute rgb channels.
         """
         hflip = hflip and random.random() < 0.5

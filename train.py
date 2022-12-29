@@ -70,8 +70,7 @@ args = parser.parse_args()
 print(args)
 if args.tb_logger:
     from torch.utils.tensorboard import SummaryWriter
-
-    tb_logger = SummaryWriter(log_dir='./tb_logger/' + args.name)
+    tb_logger = SummaryWriter(log_dir='./tb_logger/' + args.exp_name)
 
 # random seed
 seed = args.seed
