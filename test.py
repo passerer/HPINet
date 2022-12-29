@@ -13,7 +13,7 @@ from HPINet import HPINet
 
 # testing settings
 parser = argparse.ArgumentParser(description='Test HPINet')
-parser.add_argument('--model', type=str, default='M', choices=['S','M','L'],
+parser.add_argument('--model', type=str, default='M', choices=['S', 'M', 'L'],
                     help='model size')
 parser.add_argument('--scale', type=int, default=4,
                     help='upscaling factor')
@@ -35,20 +35,15 @@ checkpoints = {'M': {'2': 'checkpoints/HPINet-M-x2.pth',
                'S': {'4': 'checkpoints/HPINet-S-x4.pth'},
                'L': {'4': 'checkpoints/HPINet-L-x4.pth'},
                }
-model_settings = \
-    {'M': dict(dim=56, block_num=8, heads=1, qk_dim=32, mlp_dim=100, patch_size=[12,16,20,24,12,16,20,24]),
-     'S': dict(dim=40, block_num=8, heads=1, qk_dim=24, mlp_dim=72, patch_size=[12,16,20,24,12,16,20,24]),
-     'L': dict(dim=64, block_num=10, heads=1, qk_dim=36, mlp_dim=128, patch_size=[12,14,16,20,24,12,14,16,20,24]),
-     }
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model_dic = model_settings[args.model]
-model_dic.update(upscale=args.scale)
-model = HPINet(**model_dic)
+model = HPINet(args.model, args.scale)
+print(model)
 model.eval()
 pretrained = utils.load_state_dict(checkpoints[args.model][str(args.scale)])
 model.load_state_dict(pretrained, strict=True)
 model = model.to(device)
+
 
 def test():
     for GT_folder, LR_folder in test_dataset_folder.items():
