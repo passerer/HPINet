@@ -14,8 +14,6 @@ This is the Pytorch implementation of HPINet (AAAI2023 Acceptance).
  [[arXiv paper](https://arxiv.org/abs/2211.16776)] [[pretrained models](https://github.com/passerer/HPINet/tree/cc/checkpoints)] [[visual results](https://pan.baidu.com/s/1qE69aeILOvG_6pq6h5Qndg 
 ) (code:z86e)]
  
-> **Note**
-> *Training code* will be released.
 
 ### Dependencies
 
@@ -43,5 +41,18 @@ The pretrained models are provided in `checkpoints/`:
 | M  | &#10004; | &#10004; | &#10004; |
 | L  |  |  |  &#10004; |
 
-We provide [visual results](https://pan.baidu.com/s/1qE69aeILOvG_6pq6h5Qndg 
-) of HPINet-M (code:z86e)
+### Train Datasets
+[DIV2K homepage](https://data.vision.ee.ethz.ch/cvl/DIV2K/)
+```
+DIV2K
+├── DIV2K_train_HR
+├── DIV2K_train_LR_bicubic
+│   ├── X2
+│   ├── X3
+│   ├── X4
+```
+### Run Train
+Here is an example:
+```
+CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7" python train.py --model M --root DIV2K/ --ext png --scale 4 
+```
